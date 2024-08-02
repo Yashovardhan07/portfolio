@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/caaf4c74bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo5.jpg" class="logo5" >
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h2><i>Hi,I am<span>Yasho</span><br>From Pulla Reddy Engineering college</i></h2>
+            </div>
+        </div>
+    </div>
+    <!-----------ABOUT-->
+    <div id="about">
+        <div class="cointainer">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am flexible, reliable and possess excellent time keeping skills.
+                       I am an enthusiastic, self-motivated, reliable, responsible and hard working person. 
+                       I am a mature team worker and adaptable to all challenging situations. 
+                       I am able to work well both in a team environment as well as using own initiative.</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents" id="skills">
+                        <ul>
+                            <li>Web Devolopment</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>Completed DataScience Internship in Skilldzire</li>
+                            <li>Community Serive Project In Water Management</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li>SSC at St.Joseph's English School from Kurnool</li>
+                            <li>Intermediate at Arora Junior college from Ieeja</li>
+                            <li>B.Tech at G.Pulla Reddy Engineering College from Kurnool</li>
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Serivces-->
+    <div id="services">
+        <div class="cointainer">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Constrcut a good web page</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI Design</h2>
+                    <p>Constrcut a good web page</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Constrcut a good App</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>yashov192@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9010455235</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/yashovardhan-powrohitham-05690b269/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_solo_yasho_/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <form>
+                    <a href="Resume.pdf" download  class=" btn btn2" >Download CV</a>
+                </form>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" requried>
+                    <input type="email" name="Email" placeholder="Your Email" required >
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Yasho.</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links")
+        var tabcontents=document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script> 
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzhXjV1-gXIhK083KKER6-MfXVrsXyV1z9_PinGeJUeFPZN3PQPInkO8t7muvVrRhDh/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
