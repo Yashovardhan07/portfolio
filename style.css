@@ -124,8 +124,8 @@ font-style: italic;
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
-    color: palegreen;
-    font-size: 14px;
+    color: yellow;
+    font-size: 20px;
 }
 .tab-contents{
     display: none;
